@@ -36,7 +36,7 @@ export const App = () => (
         <div className="tabs is-boxed">
           <ul>
             <li data-cy="Tab" className="is-active">
-              <a href="#/">Tab 1</a>
+              <a href="#/">{tabs.title}</a>
             </li>
             <li data-cy="Tab">
               <a href="#/">Tab 2</a>
