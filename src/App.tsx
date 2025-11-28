@@ -1,7 +1,7 @@
 import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
-import router from 'react-router-dom';
+import router, { Routes } from 'react-router-dom';
 
 const tabs = [
   { id: 'tab-1', title: 'Tab 1', content: 'Some text 1' },
@@ -35,18 +35,20 @@ export const App = () => (
         <h1 className="title">Page not found</h1>
 
         <div className="tabs is-boxed">
-          <ul>
-            <li data-cy="Tab" className="is-active">
-              <link href="#/">{tabs.title}</link>
-            </li>
-            <li data-cy="Tab">
-              <link href="#/">Tab 2</link>
-            </li>
-            <li data-cy="Tab">
-              <link href="#/">Tab 3</link>
-            </li>
-          </ul>
-        </div>
+          <Routes>
+            <ul>
+              <li data-cy="Tab" className="is-active">
+                <link href="#/">{tabs.title}</link>
+              </li>
+              <li data-cy="Tab">
+                <link href="#/">Tab 2</link>
+              </li>
+              <li data-cy="Tab">
+                <link href="#/">Tab 3</link>
+              </li>
+            </ul>
+          </div>
+        </Routes>
 
         <div className="block" data-cy="TabContent">
           Please select a tab
